@@ -1,0 +1,89 @@
+.hero {
+  background-color: #2f303a;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero/m-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+    screen and (min-resolution: 192dpi) and (min-width: 320px),
+    screen and (min-resolution: 2dppx) and (min-width: 320px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/m-hero@2x.jpg");
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/t-hero.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero/t-hero@2x.jpg");
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/d-hero.jpg");
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero/d-hero@2x.jpg");
+    }
+  }
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero-title {
+  margin-bottom: 30px;
+
+  @include font(900, 26px, 1.615, $ls: 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media screen and (min-width: 1200px) {
+    @include font(900, 44px, 1.364, $ls: 0.06em);
+  }
+}
+
+.modal-button {
+  display: block;
+  min-width: 200px;
+  padding: 10px 32px;
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+
+  @include font(700, 16px, 1.875, $ls: 0.06em);
+  color: #ffffff;
+  background-color: var(--accent-color);
+}

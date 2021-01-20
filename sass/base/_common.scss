@@ -66,11 +66,15 @@ img {
 }
 
 .section-title {
-  margin-bottom: 50px;
-
-  @include font(700, 36px, 1.167);
+  margin-bottom: 30px;
+  @include font(700, 28px, 1.179);
   text-align: center;
   color: var(--secondary-color);
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    @include font(700, 36px, 1.167);
+  }
 }
 
 .section-container {

@@ -1,12 +1,24 @@
 .clients-list {
   @include center-flex($jc: space-between);
+
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+}
+
+.clients-list-item {
+  @media screen and (max-width: 1199px) {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
 }
 
 .clients-box {
-  @include center-flex();
-
-  width: 170px;
+  width: 210px;
   height: 90px;
+  @include center-flex();
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
@@ -15,6 +27,13 @@
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
   }
 }
 

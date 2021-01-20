@@ -14,10 +14,7 @@
     margin-bottom: 20px;
 
     font-family: Raleway;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.192;
-    letter-spacing: 0.03em;
+    @include font(700, 26px, 1.192);
     color: #ffffff;
   }
 
@@ -30,21 +27,20 @@
   display: block;
   margin-bottom: 9px;
 
+  @include font(400, 14px, 1.714);
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+.footer-contact-box {
+  width: 231px;
+  margin-right: 70px;
 }
 
 .footer-contact {
   display: inline;
-  width: 231px;
-  margin-right: 70px;
   font-style: normal;
-  font-size: 14px;
-  line-height: 1.174;
-  letter-spacing: 0.03em;
+  @include font(400, 14px, 1.714);
   color: rgba(255, 255, 255, 0.6);
 
   &:hover,
@@ -60,10 +56,7 @@
 .join {
   display: block;
   margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.143);
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -139,10 +132,7 @@
   border-radius: 4px;
   cursor: pointer;
 
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
+  @include font(700, 16px, 1.875, $ls: 0.06em);
   color: #ffffff;
   background-color: var(--accent-color);
 }

@@ -421,20 +421,25 @@ body {
 .footer-adress {
   display: block;
   margin-bottom: 9px;
-  font-style: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
+  font-style: normal;
   color: #ffffff;
+}
+
+.footer-contact-box {
+  width: 231px;
+  margin-right: 70px;
 }
 
 .footer-contact {
   display: inline;
-  width: 231px;
-  margin-right: 70px;
   font-style: normal;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 1.174;
+  line-height: 1.714;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }

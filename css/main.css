@@ -642,33 +642,37 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer .container {
-    -webkit-box-orient: unset;
-    -webkit-box-direction: unset;
-        -ms-flex-direction: unset;
-            flex-direction: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer .container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 79px;
+    padding-right: 86px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer .container {
-    -ms-flex-wrap: unset;
-        flex-wrap: unset;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
@@ -716,17 +720,15 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .footer-contact-box {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 60px;
-  }
+.footer-contact-box {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .footer-contact-box {
     text-align: unset;
+    margin-bottom: unset;
     width: 231px;
     margin-right: 70px;
   }
@@ -832,6 +834,13 @@ body {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .subscribe {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .subscribe-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -876,6 +885,12 @@ body {
   border-radius: 4px;
   background-color: #2f303a;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-input {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {

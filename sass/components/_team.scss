@@ -3,16 +3,28 @@
 }
 
 .team-list {
-  @include center-flex($jc: space-between);
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .team-list-item:not(:last-child) {
-  margin-right: 30px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+  }
 }
 
 .team-card-name {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -21,31 +33,38 @@
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   background-color: #fff;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 }
 
 .team-member {
   margin-bottom: 10px;
 
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.188;
+  @include font(500, 16px, 1.188);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--secondary-color);
 }
 
 .team-text {
-  font-size: 16px;
-  line-height: 1.188;
+  @include font(400, 16px, 1.188);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--main-color);
   margin-bottom: 16px;
 }
 
 .team-social-links {
-  margin-right: 32px;
-  margin-left: 32px;
+  margin-right: 122px;
+  margin-left: 122px;
+  @media screen and (min-width: 768px) {
+    margin-right: 74px;
+    margin-left: 74px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 32px;
+    margin-left: 32px;
+  }
 }
 
 .social-links-list {
@@ -85,4 +104,20 @@
 
 .social-links-list-team {
   display: block;
+}
+
+// Сетка для планшета
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-list {
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+
+  .team-list-item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
 }

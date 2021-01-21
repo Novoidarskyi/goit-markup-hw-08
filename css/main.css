@@ -459,25 +459,40 @@ body {
   background-color: #f5f4fa;
 }
 
-.team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
-.team-list-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .team-list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .team-card-name {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -488,28 +503,49 @@ body {
   background-color: #fff;
 }
 
+@media screen and (min-width: 1200px) {
+  .team-card-name {
+    padding-bottom: 30px;
+  }
+}
+
 .team-member {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.188;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--secondary-color);
 }
 
 .team-text {
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.188;
-  text-align: center;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--main-color);
   margin-bottom: 16px;
 }
 
 .team-social-links {
-  margin-right: 32px;
-  margin-left: 32px;
+  margin-right: 122px;
+  margin-left: 122px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-social-links {
+    margin-right: 74px;
+    margin-left: 74px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-social-links {
+    margin-right: 32px;
+    margin-left: 32px;
+  }
 }
 
 .social-links-list {
@@ -557,6 +593,21 @@ body {
 
 .social-links-list-team {
   display: block;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  .team-list-item {
+    -ms-flex-preferred-size: calc(100% / 2 - 30px);
+        flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
 }
 
 .clients-list {

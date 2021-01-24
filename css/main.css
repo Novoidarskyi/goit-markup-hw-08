@@ -134,20 +134,31 @@ body {
 }
 
 .site-nav .logo {
-  margin-right: 93px;
   font-family: Raleway;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
+  font-size: 24px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: #000000;
 }
 
-.site-nav .site-nav-link.current {
-  color: var(--accent-color);
+@media screen and (min-width: 768px) {
+  .site-nav .logo {
+    margin-right: 88px;
+  }
 }
 
-.site-nav-list {
+@media screen and (min-width: 1200px) {
+  .site-nav .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+    margin-right: 93px;
+  }
+}
+
+.site-nav .site-nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,8 +167,12 @@ body {
           align-items: center;
 }
 
-.site-nav-list-item:not(:last-child) {
+.site-nav .site-nav-list-item:not(:last-child) {
   margin-right: 50px;
+}
+
+.site-nav .site-nav-link.current {
+  color: var(--accent-color);
 }
 
 .site-nav-link {
@@ -192,14 +207,34 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: auto;
 }
 
+@media screen and (min-width: 1200px) {
+  .contact-list {
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .contact-list-submenu:first-child {
-  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-list-submenu:first-child {
+    margin-bottom: unset;
+    margin-right: 50px;
+  }
 }
 
 .contact-link {
@@ -209,15 +244,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.02em;
   color: var(--main-color);
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contact-link:hover, .contact-link:focus {

@@ -10,14 +10,26 @@
   align-items: center;
 
   .logo {
-    margin-right: 93px;
-
     font-family: Raleway;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.192;
-    letter-spacing: 0.03em;
+    @include font(700, 24px, 1.167);
     color: #000000;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 88px;
+    }
+    @media screen and (min-width: 1200px) {
+      @include font(700, 26px, 1.192);
+      margin-right: 93px;
+    }
+  }
+
+  .site-nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-nav-list-item:not(:last-child) {
+    margin-right: 50px;
   }
 
   .site-nav-link.current {
@@ -25,24 +37,13 @@
   }
 }
 
-.site-nav-list {
-  display: flex;
-  align-items: center;
-}
-
-.site-nav-list-item:not(:last-child) {
-  margin-right: 50px;
-}
 .site-nav-link {
   position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
+  @include font(500, 14px, 1.143, $ls: 0.02em);
   color: var(--secondary-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -65,27 +66,37 @@
 
 .contact-list {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   margin-left: auto;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: unset;
+    align-items: center;
+  }
 }
 
 .contact-list-submenu:first-child {
-  margin-right: 50px;
+  margin-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: unset;
+    margin-right: 50px;
+  }
 }
 
 .contact-link {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.143;
-  letter-spacing: 0.02em;
+  @include font(500, 12px, 1.167, $ls: 0.02em);
   color: var(--main-color);
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1200px) {
+    @include font(500, 14px, 1.143, $ls: 0.02em);
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   &:hover,
   &:focus {

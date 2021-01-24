@@ -23,7 +23,25 @@
       <div class="container">
         <nav class="site-nav">
           <a href="index.html" lang="en" class="logo"><span>Web</span>Studio</a>
-          <ul class="site-nav-list">
+          <button 
+          type="button" 
+          class="menu-button" 
+          aria-expanded="false" 
+          aria-controls="menu-container"
+          data-menu-button>
+              <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-cross" href="./images/sprite.svg#cross"></use>
+              <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+            </svg>
+
+          </button>
+
+          <div class="wrapper-mobile-menu" id="menu-container" data-menu>
+            <ul class="site-nav-list">
             <li class="site-nav-list-item">
               <a href="index.html" class="site-nav-link current">Студия</a>
             </li>
@@ -34,8 +52,7 @@
               <a href="" class="site-nav-link">Контакты</a>
             </li>
           </ul>
-        </nav>
-        <ul class="contact-list">
+                  <ul class="contact-list">
           <li class="contact-list-submenu">
            <a href="mailto:info@devstudio.com" class="contact-link"
               >
@@ -54,6 +71,8 @@
             >
           </li>
         </ul>
+          </div> 
+        </nav>
       </div>
     </header>
     <main>
@@ -643,6 +662,7 @@
         </form>
       </div> 
     </div> -->
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

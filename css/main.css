@@ -207,7 +207,6 @@ body {
   .wrapper-mobile-menu {
     display: none;
     position: absolute;
-    z-index: 3;
     top: 100%;
     left: 0;
     width: 100%;
@@ -1238,14 +1237,25 @@ body {
 }
 
 .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 }
 
 .is-hidden {
@@ -1256,12 +1266,12 @@ body {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 90%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   padding: 40px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1270,6 +1280,14 @@ body {
   opacity: 1;
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    top: 50%;
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -1358,6 +1376,7 @@ body {
 
 .textarea::-webkit-input-placeholder {
   content: " ";
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.01em;
@@ -1366,6 +1385,7 @@ body {
 
 .textarea:-ms-input-placeholder {
   content: " ";
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.01em;
@@ -1374,6 +1394,7 @@ body {
 
 .textarea::-ms-input-placeholder {
   content: " ";
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.01em;
@@ -1382,6 +1403,7 @@ body {
 
 .textarea::placeholder {
   content: " ";
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.01em;
@@ -1405,6 +1427,7 @@ body {
 
 .name-input {
   margin-bottom: 4px;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.667;
   letter-spacing: 0.01em;
@@ -1416,10 +1439,19 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
+  line-height: 1.5;
   letter-spacing: 0.03em;
+  text-align: center;
   color: var(--secondary-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form-policy-text {
@@ -1455,10 +1487,20 @@ body {
 
 .checkbox-text {
   display: inline-block;
-  font-size: 14px;
-  line-height: 1.714;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: var(--main-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+  }
 }
 
 .checkbox-link {
